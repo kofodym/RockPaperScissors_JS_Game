@@ -94,7 +94,13 @@ function playRound() {
       );
     }
   }
-
-
+  //if the round is up to 2, DECLARE OVERALL WINNER
+  if ((round = 2 && countUser > countComputer)) {
+    console.log(" You won ");
+  } else if ((round = 2 && countUser < countComputer)) {
+    console.log(" You lose! sorry try again  ");
+  } else {
+    console.log(" TIE , NO WINNER ");
+  }
 }
 playRound();
