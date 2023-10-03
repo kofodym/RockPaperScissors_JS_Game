@@ -69,3 +69,32 @@ function playGame(userInput, computerInput) {
     return "lose";
   }
 }
+
+
+//Create a function that counts rounds, if game is played to 2 rounds a winner or loser is displayed
+function playRound() {
+  let round = 0;
+
+  //iterate through each round
+  for (let i = 1; i <= 3; i++) {
+    let game = playGame(getPlayerChoice(), getComputerChoice());
+    if (game === "won") {
+      round++;
+      console.log(
+        `Round: ${round},   User-Score: ${countUser}: ${countComputer} Computer-Score`
+      );
+    } else if (game === "lose") {
+      round++;
+      console.log(
+        `Round: ${round},   User-Score: ${countUser}: ${countComputer} Computer-Score`
+      );
+    } else {
+      console.log(
+        `Round: ${round},   User-Score: ${countUser}:  ${countComputer} Computer-Score`
+      );
+    }
+  }
+
+
+}
+playRound();
