@@ -36,3 +36,36 @@ function getPlayerChoice() {
     return "scissors";
   }
 }
+
+
+//PLAY GAME
+function playGame(userInput, computerInput) {
+  //if both answers are the same(tie), replay
+  if (userInput === computerInput) {
+    console.log("It's a tie, try again");
+    return "tie";
+  }
+  //Conditions when user wins
+  else if (
+    (userInput == "rock" && computerInput === "scissors") ||
+    (userInput == "paper" && computerInput === "rock") ||
+    (userInput == "scissors" && computerInput === "paper")
+  ) {
+    console.log(`${username} won, ${userInput} beats ${computerInput}`);
+    countUser++;
+    return "won";
+
+    //condition when user loses to computer
+  } else if (
+    (computerInput == "rock" && userInput === "scissors") ||
+    (computerInput == "paper" && userInput === "rock") ||
+    (computerInput == "scissors" && userInput === "paper")
+  ) {
+    console.log(`Computer won, ${computerInput} beats ${userInput}`);
+    countComputer++;
+    return "lose";
+  } else {
+    console.log(`INVALID, ENTER A VALID INPUT`);
+    return "lose";
+  }
+}
