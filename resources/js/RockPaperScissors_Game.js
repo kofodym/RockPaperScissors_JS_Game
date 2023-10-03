@@ -16,3 +16,23 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 // getComputerChoice();
 
+
+function getPlayerChoice() {
+  let rockValue = symbols[0];
+  let paperValue = symbols[1];
+  let scissorsValue = symbols[2];
+  let userValue = prompt(
+    "What symbol would you like to play with? "
+  ).toLowerCase();
+
+  if (userValue === rockValue) {
+    console.log(username + " you picked, rock");
+    return "rock";
+  } else if (userValue === paperValue) {
+    console.log(username + " you picked, paper");
+    return "paper";
+  } else if (userValue === scissorsValue) {
+    console.log(username + " you picked, scissors ");
+    return "scissors";
+  }
+}
