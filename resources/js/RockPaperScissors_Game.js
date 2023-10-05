@@ -16,7 +16,6 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 // getComputerChoice();
 
-
 function getPlayerChoice() {
   let rockValue = symbols[0];
   let paperValue = symbols[1];
@@ -33,10 +32,12 @@ function getPlayerChoice() {
     return "paper";
   } else if (userValue === scissorsValue) {
     console.log(username + " you picked, scissors ");
-    return "scissors";
-  }
-}
 
+    return "scissors";
+ 
+  }
+          
+}
 
 //PLAY GAME
 function playGame(userInput, computerInput) {
@@ -67,9 +68,10 @@ function playGame(userInput, computerInput) {
   } else {
     console.log(`INVALID, ENTER A VALID INPUT`);
     return "lose";
+  
   }
-}
 
+}
 
 //Create a function that counts rounds, if game is played to 2 rounds a winner or loser is displayed
 function playRound() {
