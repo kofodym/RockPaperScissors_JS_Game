@@ -7,6 +7,7 @@ let symbols = ["rock", "paper", "scissors"];
 let countUser = 0;
 let countComputer = 0;
 
+
 //Randomly select computer choice
 function getComputerChoice() {
   let selectCompChoice = Math.floor(Math.random() * symbols.length);
@@ -14,7 +15,8 @@ function getComputerChoice() {
   return symbols[selectCompChoice];
 }
 // console.log(getComputerChoice());
-// getComputerChoice();
+
+
 
 function getPlayerChoice() {
   let rockValue = symbols[0];
@@ -34,10 +36,11 @@ function getPlayerChoice() {
     console.log(username + " you picked, scissors ");
 
     return "scissors";
- 
+
   }
-          
+
 }
+
 
 //PLAY GAME
 function playGame(userInput, computerInput) {
@@ -68,10 +71,11 @@ function playGame(userInput, computerInput) {
   } else {
     console.log(`INVALID, ENTER A VALID INPUT`);
     return "lose";
-  
+
   }
 
 }
+
 
 //Create a function that counts rounds, if game is played to 2 rounds a winner or loser is displayed
 function playRound() {
@@ -96,6 +100,7 @@ function playRound() {
       );
     }
   }
+
   //if the round is up to 2, DECLARE OVERALL WINNER
   if ((round = 2 && countUser > countComputer)) {
     console.log(" You won ");
@@ -103,6 +108,9 @@ function playRound() {
     console.log(" You lose! sorry try again  ");
   } else {
     console.log(" TIE , NO WINNER ");
+
   }
+
 }
+
 playRound();
